@@ -9,9 +9,12 @@ def tiradaMediaDados(dados,caras,numTirada):
     print("Total "+str(resultados))
     return resultados
 
-tiradas=[]
-for x in range (0,20):
-    tiradas.append(tiradaMediaDados(2,6,x+1))
-tiradas.sort()
-for x in range (2,13):
-    print("Ha salido",tiradas.count(x)," veces el",x)
+def tirarXVeces(veces):
+    tiradas=[]
+    for x in range (0,veces):
+        tiradas.append(tiradaMediaDados(2,6,x+1))
+    tiradas.sort()
+    for x in range (2,13):
+        print("Ha salido",tiradas.count(x)," veces el",x)
+
+tirarXVeces(50)
